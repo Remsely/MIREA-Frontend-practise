@@ -169,7 +169,8 @@ input[type="email"],
 input[type="password"],
 input[type="file"],
 textarea,
-input[type="datetime-local"]{
+input[type="datetime-local"],
+#f-teams{
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -183,9 +184,10 @@ input[type="email"]:focus,
 input[type="password"]:focus,
 input[type="file"]:focus,
 textarea:focus,
-input[type="datetime-local"]:focus{
+input[type="datetime-local"]:focus,
+#f-teams:focus{
     border-color: black;
-    color:rgb(255, 0, 50);
+    color:rgb(255, 0, 75);
 }
 
 input[type="text"]::placeholder,
@@ -198,7 +200,7 @@ input[type="datetime-local"]::placeholder{
 }
 
 button[type=submit]{
-    background-color: rgb(255, 0, 50);
+    background-color: rgb(255, 0, 75);
     color: #fff;
     padding: 10px 20px;
     border: none;
