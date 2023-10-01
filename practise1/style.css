@@ -1,5 +1,19 @@
 * {
     margin: 0;
+    box-sizing: border-box;
+}
+
+fieldset * {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#subscribe, #gender-female, #gender-male{
+    display: inline-block;
+}
+
+label{
+    display: block;
 }
 
 body{
@@ -113,4 +127,91 @@ a:visited{
 
 #header_div {
     height: 95px;
+}
+
+.registration-form{
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    width: 400px;
+}
+
+.registration-fieldset{
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+.registration-legend {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.male-female-div{
+    padding-top: 10px;
+    display: block;
+    margin: 0;
+}
+
+.male-female-div label{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.subscribe-to-news{
+    margin: 20px 0 10px 0;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea,
+input[type="datetime-local"]{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+input[type="datetime-local"]:focus{
+    border-color: black;
+    color:rgb(255, 0, 50);
+}
+
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="file"]::placeholder,
+input[type="datetime-local"]::placeholder{
+    color: #999;
+}
+
+button[type=submit]{
+    background-color: rgb(255, 0, 50);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(255, 0, 150);
+}
+
+.video-iframe{
+    border-radius: 25px;
+    width: 892px;
+    height: 502px;
 }
