@@ -3,6 +3,104 @@
     box-sizing: border-box;
 }
 
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 5px;
+}
+
+.gallery-image {
+    flex: 1 1 auto;
+    border-radius: 25px;
+    height: auto;
+    max-width: 800px;
+    width: 400px;
+    min-width: 150px;
+    margin: 5px ;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    display: none;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/2048px-Hamburger_icon.svg.png") no-repeat;
+    background-size: 100%;
+    transform: rotate(0deg);
+}
+
+#menu-toggle:checked + .menu-icon {
+    transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .header-nav-burger {
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#menu-toggle:checked + .header-nav-burger::after {
+    content: '\2716';
+}
+
+/* Стили для меню компьютерной версии */
+.header-nav-desktop {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav-burger {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 3;
+    width: 100%; /* Растягиваем меню по ширине экрана */
+}
+
+.header-nav-burger a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333333;
+    transition: color 0.3s ease;
+}
+
+.header-nav-burger a:hover {
+    color: crimson;
+}
+
+/* Показываем навигационное меню при изменении ширины окна */
+@media screen and (max-width: 768px) {
+    .header-nav-desktop {
+        display: none;
+        visibility: hidden;
+    }
+
+    .menu-icon{
+        display: block;
+    }
+
+    body {
+        padding-top: 80px;
+    }
+
+    #heading1 {
+        margin-bottom: 0;
+    }
+}
+
 body {
     background-color: #f0f0f0;
     margin: 0;
@@ -56,19 +154,11 @@ li {
     position: fixed;
     top: 0;
     width: 100%;
-    max-height: 105px;
+    max-height: 100px;
     background-color: #fff;
     padding-top: 10px;
     z-index: 2;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.header-nav {
-    width: 100%;
-    display: inline-block;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 #heading1 {
