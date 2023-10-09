@@ -15,25 +15,20 @@
 
 <body>
 <header class="header">
-    <img src="../images/f1_logo.svg" width="80" height="20" alt="logo">
-    <h1 id="heading1" height="20">SINGAPORE GRAND PRIX 2023</h1>
-
-    <label for="menu-toggle" id="menu-icon" class="menu-icon"></label>
-    <input type="checkbox" id="menu-toggle">
-
-    <!-- Меню для телефонов -->
-    <nav class="header-nav header-nav-burger">
-        <label for="menu-toggle"><a href="#track_metrics">Track metrics</a></label>
-        <label for="menu-toggle"><a href="#track_history">Track history</a></label>
-        <label for="menu-toggle"><a href="#event_information">Information about events</a></label>
-    </nav>
-
-    <nav class="header-nav header-nav-desktop">
-        <!-- Меню для компьютеров -->
-        <a href="#track_metrics">Track metrics</a> |
-        <a href="#track_history">Track history</a> |
-        <a href="#event_information">Information about events</a>
-    </nav>
+    <section class="top-nav-section">
+        <div>
+            <img src="../images/f1_logo.svg" width="80" height="20" alt="logo">
+        </div>
+        <input id="menu-toggle" type="checkbox" />
+        <label class='menu-button-container' for="menu-toggle">
+            <div class='menu-button'></div>
+        </label>
+        <ul class="menu">
+            <li><a class="menu-a" href="#track_metrics">Track metrics</a></li>
+            <li><a class="menu-a" href="#track_history">Track history</a></li>
+            <li><a class="menu-a" href="#event_information">Information about events</a></li>
+        </ul>
+    </section>
 </header>
 
 <section>
