@@ -59,17 +59,17 @@ body {
 
 .glassmorphism-container .card:nth-child(1):before,
 .glassmorphism-container .card:nth-child(1):after {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
+    background: linear-gradient(to right, #007adf 0%, #00ecbc 100%);
 }
 
 .glassmorphism-container .card:nth-child(2):before,
 .glassmorphism-container .card:nth-child(2):after {
-    background: linear-gradient(to top, #ff0844, #ffb199);
+    background: linear-gradient(to right, #f83600 0%, #f9d423 100%);
 }
 
 .glassmorphism-container .card:nth-child(3):before,
 .glassmorphism-container .card:nth-child(3):after {
-    background: linear-gradient(to top, #0fd850, #f9f047);
+    background: linear-gradient(to right, #0fd850, #f9f047);
 }
 
 .glassmorphism-container .card span {
