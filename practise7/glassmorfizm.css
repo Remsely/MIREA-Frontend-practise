@@ -1,5 +1,6 @@
 body {
-    --white: rgba(255,255,255,0.3);
+    --gray: rgba(50,50,50,0.4);
+    --white: rgba(255,255,255,0.2);
     display: block;
     margin: 0;
     padding: 0;
@@ -33,19 +34,18 @@ body {
 
 .glassmorphism-container .card::after,
 .glassmorphism-container .card::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 50px;
     width: 50%;
     height: 100%;
-    background: #fff;
-    border-radius: 100px;
-    transform: skewX(-15deg);
+    border-radius: 15px;
+    transform: skewX(15deg);
     transition: 0.5s;
 }
 
 .glassmorphism-container .card::after {
-    content: '';
     transition: 0.5s;
     filter: blur(30px);
 }
@@ -87,17 +87,18 @@ body {
     content:'';
     position: absolute;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     opacity: 0;
     transition: 0.1s;
     animation: square-animation 2s ease-in-out infinite;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08)
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
 }
 
 .glassmorphism-container .card:hover span::before {
     top: -50px;
-    left: 50px;
+    left: 0;
     width: 100px;
     height: 100px;
     opacity: 1;
@@ -111,17 +112,19 @@ body {
     width: 100%;
     height: 100%;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     opacity: 0;
     transition: 0.5s;
     animation: square-animation 2s ease-in-out infinite;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
     animation-delay: -1s;
 }
 
 .glassmorphism-container .card:hover span:after {
-    bottom: -50px;
+    bottom: -20px;
     right: 50px;
     width: 100px;
     height: 100px;
@@ -130,11 +133,11 @@ body {
 
 @keyframes square-animation {
     0%, 100% {
-        transform: translate(0, 20px);
+        transform: translate(20px, 20px);
     }
 
     50% {
-        transform: translate(0, -20px);
+        transform: translate(0);
     }
 }
 
@@ -142,12 +145,15 @@ body {
     position: relative;
     left: 0;
     padding: 20px 40px;
-    background: rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
     border-radius: 25px;
     z-index: 1;
     transition: 0.5s;
     color: #fff;
+    border-left: 1px solid var(--white);
+    border-top: 1px solid var(--white);
+    box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
 }
 
 .glassmorphism-container .card:hover .card-content {
@@ -167,32 +173,27 @@ body {
     line-height: 1.4em;
 }
 
-body {
-    background: linear-gradient(45deg, #FC466B, #3F5EFB);
-    height: 100vh;
-    font-family: 'Montserrat', sans-serif;
-}
-
 .form-container {
     display: flex;
     justify-content: center;
     width: 100%;
-    background: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.40) 120%) #989898;
+    background-blend-mode: multiply,multiply;
     padding-top: 100px;
     padding-bottom: 100px;
     margin: 0;
 }
-.container {
+.form-div {
     position: relative;
 }
 
 form {
-    background: var(--white);
+    background: var(--gray);
     padding: 3em;
-    height: 320px;
+    height: auto;
     border-radius: 20px;
-    border-left: 1px solid var(--white);
-    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
     backdrop-filter: blur(10px);
     box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -207,7 +208,7 @@ form p {
     opacity: 0.7;
     font-size: 1.4rem;
     margin-top: 0;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
 }
 
@@ -229,10 +230,10 @@ form input {
     background: transparent;
     width: 200px;
     padding: 1em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     border: none;
-    border-left: 1px solid var(--white);
-    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
     border-radius: 5000px;
     backdrop-filter: blur(5px);
     box-shadow: 4px 4px 60px rgba(0,0,0,0.2);
@@ -257,9 +258,7 @@ form input {
     }
 
     &[type="button"] {
-        margin-top: 10px;
-        width: 150px;
-        font-size: 1rem;
+        width: 100px;
 
         &:hover {
             cursor: pointer;
@@ -282,70 +281,70 @@ form:hover{
     text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
 }
 
-.drop {
-    background: var(--white);
+.form-square {
+    background: var(--gray);
     backdrop-filter: blur(10px);
     border-radius: 10px;
-    border-left: 1px solid var(--white);
-    border-top: 1px solid var(--white);
+    border-left: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
     box-shadow: 10px 10px 60px -8px rgba(0, 0, 0, 0.2);
     transition: all 1s ease;
     position: absolute;
 }
 
-.drop-1 {
+.form-square-1 {
     height: 80px;
     width: 80px;
-    top: -20px;
-    left: -40px;
+    top: 40px;
+    left: -50px;
     z-index: 0;
-    --random-x: 2; /* Пример случайного значения по оси X (от 0 до 1) */
-    --random-y: 1.3; /* Пример случайного значения по оси Y (от 0 до 1) */
-    animation: moveSquare 10s linear infinite;
+    --rotateX: 2; /* Пример случайного значения по оси X (от 0 до 1) */
+    --rotateY: 1.3; /* Пример случайного значения по оси Y (от 0 до 1) */
+    animation: moveSquare 7s linear infinite;
 }
 
-.drop-2 {
+.form-square-2 {
     height: 80px;
     width: 80px;
     bottom: -20px;
     right: -40px;
-    --random-x: 2.2; /* Пример случайного значения по оси X (от 0 до 1) */
-    --random-y: 1.8; /* Пример случайного значения по оси Y (от 0 до 1) */
-    animation: moveSquare 10s linear infinite;
-    z-index: 2;
+    --rotateX: 2.2; /* Пример случайного значения по оси X (от 0 до 1) */
+    --rotateY: 1.8; /* Пример случайного значения по оси Y (от 0 до 1) */
+    animation: moveSquare 7s linear infinite;
+    z-index: 0;
 }
 
-.drop-3 {
+.form-square-3 {
+    height: 90px;
+    width: 90px;
+    bottom: -30px;
+    left: -40px;
+    z-index: 2;
+    --rotateX: 1.1; /* Пример случайного значения по оси X (от 0 до 1) */
+    --rotateY: 1.7; /* Пример случайного значения по оси Y (от 0 до 1) */
+    animation: moveSquare 8s linear infinite;
+}
+
+.form-square-4 {
     height: 100px;
     width: 100px;
-    bottom: 120px;
-    right: 300px;
-    z-index: 0;
-    --random-x: 2.1; /* Пример случайного значения по оси X (от 0 до 1) */
-    --random-y: 1.7; /* Пример случайного значения по оси Y (от 0 до 1) */
-    animation: moveSquare 10s linear infinite;
-}
-
-.drop-4 {
-    height: 120px;
-    width: 120px;
-    top: -60px;
-    right: -60px;
-    --random-x: 1.5; /* Пример случайного значения по оси X (от 0 до 1) */
-    --random-y: 1.9; /* Пример случайного значения по оси Y (от 0 до 1) */
+    top: -90px;
+    right: 50px;
+    --rotateX: 1.5; /* Пример случайного значения по оси X (от 0 до 1) */
+    --rotateY: 1.9; /* Пример случайного значения по оси Y (от 0 до 1) */
     animation: moveSquare 10s linear infinite;
     z-index: 2;
 }
 
-.drop-5 {
+.form-square-5 {
     height: 60px;
     width: 60px;
     bottom: 170px;
     left: 300px;
-    z-index: 0;
-    --random-x: 1.5; /* Пример случайного значения по оси X (от 0 до 1) */
-    --random-y: 1.3; /* Пример случайного значения по оси Y (от 0 до 1) */
-    animation: moveSquare 10s linear infinite;
+    z-index: 2;
+    --rotateX: 1.5; /* Пример случайного значения по оси X (от 0 до 1) */
+    --rotateY: 1.3; /* Пример случайного значения по оси Y (от 0 до 1) */
+    animation: moveSquare 5s linear infinite;
 }
 
 a,
@@ -360,14 +359,8 @@ button:focus {
     0% {
         transform: translate(0, 0);
     }
-    25% {
-        transform: translate(calc(10px * var(--random-x)), calc(10px * var(--random-y)));
-    }
     50% {
-        transform: translate(0, 0);
-    }
-    75% {
-        transform: translate(calc(10px * var(--random-x)), calc(10px * var(--random-y)));
+        transform: translate(calc(10px * var(--rotateX)), calc(10px * var(--rotateY)));
     }
     100% {
         transform: translate(0, 0);
