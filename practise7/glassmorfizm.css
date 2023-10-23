@@ -500,3 +500,51 @@ button:focus {
         transform: rotate(1turn);
     }
 }
+
+.social-buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #000;
+    width: 100%;
+}
+
+.social-button {
+    width: 100px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.social-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.social-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);;
+    transition: width 0.5s;
+    z-index: 0;
+}
+
+.social-button:hover {
+    background-color: transparent;
+}
+
+.social-button:hover::before {
+    width: 100%;
+}
