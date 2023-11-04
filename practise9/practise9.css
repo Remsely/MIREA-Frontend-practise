@@ -1,0 +1,34 @@
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+}
+
+.like-button {
+    border-radius: 10px;
+    background-color: #181818;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.drawing-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
