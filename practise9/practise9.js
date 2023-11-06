@@ -2,7 +2,7 @@
 let registration = prompt('Желаете пройти регистрацию на сайте? (Да/Нет)');
 while (registration.toLowerCase() !== 'да') {
     alert('Попробуйте ещё раз.');
-    registration = prompt('Желаете пройти регистрацию на сайте? (Да/Нет)');
+    registration = prompt('Желаете пройти регистрацию на сайте?');
 }
 alert('Круто!');
 
@@ -40,7 +40,7 @@ function toggleLike() {
         startDrawing();
     } else {
         button.style.backgroundColor = '#181818';
-        stopDrawing()
+        stopDrawing();
     }
 }
 
