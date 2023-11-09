@@ -1,0 +1,127 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --gray: rgba(50,50,50,0.4);
+    --white: rgba(255,255,255,0.2);
+}
+
+.form-div {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.basket-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 200px;
+    height: auto;
+}
+
+#currentValue {
+    max-width: 200px;
+    text-align: center;
+}
+
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#captcha {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+button {
+    background-color: #ff0033;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:disabled {
+    background-color: #ddd;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.blur-cards-container {
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background: linear-gradient(-225deg, #231557, #44107A, #FF1361, #FFF800, #FF1361, #44107A, #231557);
+}
+
+.blur-card-blur-div {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.blur-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
+    margin: 0 10px;
+    background-color: var(--gray);
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    border-radius: 20px;
+    border-left: 1px solid var(--gray);
+    border-top: 1px solid var(--gray);
+    backdrop-filter: blur(10px);
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+    transition: 0.35s ease-in-out;
+    cursor: pointer;
+}
+
+.blur-card-blur-div:hover .blur-card{
+    transform: scale(1);
+    filter: blur(5px);
+}
+
+.blur-card-blur-div:hover .blur-card:hover {
+    transform: scale(1.04);
+    filter: blur(0px);
+    z-index: 999;
+}

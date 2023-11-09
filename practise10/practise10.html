@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №10</title>
+    <link rel="stylesheet" href="practise10.css">
+</head>
+<body>
+
+<div class="form-div">
+    <form id="form">
+        <!-- Поля для ввода -->
+        <label for="username">Имя пользователя:</label>
+        <input type="text" id="username" name="username" required>
+        <br>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" name="password" required>
+        <br>
+
+        <!-- Капча -->
+        <label for="captcha">Капча:</label>
+        <div id="captcha"></div>
+        <label for="userInput"></label><input type="text" id="userInput" name="userInput" required>
+        <button type="button" onclick="checkCaptcha()">Проверить</button>
+
+        <!-- Кнопка отправки формы -->
+        <br>
+        <button type="submit" id="submitButton" disabled>Зарегистрироваться</button>
+    </form>
+</div>
+
+<div class="basket-div">
+    <label for="currentValue">Текущая сумма заказа:</label>
+    <input type="text" id="currentValue" readonly>
+    <button onclick="accumulator.read()">Добавить товар в корзину</button>
+</div>
+
+<div class="blur-cards-container">
+    <div class="blur-card-blur-div">
+        <div class="blur-card">
+            <p class="card-text">Карточка 1</p>
+        </div>
+
+        <div class="blur-card">
+            <p class="card-text">Карточка 2</p>
+        </div>
+
+        <div class="blur-card">
+            <p class="card-text">iiiiiiiiiiiiiiiiiiiiiiiiiiioooooooo</p>
+        </div>
+    </div>
+</div>
+
+<script src="practise10.js"></script>
+
+</body>
+</html>
