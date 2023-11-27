@@ -107,5 +107,5 @@ function truncate(str, maxlength) {
 let elements = document.getElementsByClassName('card-text');
 
 for (let i = 0; i < elements.length; i++) {
-    elements[i].innerText = truncate(elements[i].innerText, 29);
+    elements[i].innerText = truncate(elements[i].innerText, 30);
 }
