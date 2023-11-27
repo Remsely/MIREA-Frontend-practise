@@ -33,18 +33,31 @@ startNotificationInterval();
 
 function createList() {
     const list = document.createElement('ul');
+    document.body.children.item(0).appendChild(list);
     let userInput;
 
-    do {
-        userInput = prompt('Введите запись в списке:');
+    function addItemToLI() {
         if (userInput && userInput.trim() !== '') {
             const listItem = document.createElement('li');
             listItem.textContent = userInput;
-            list.appendChild(listItem);
-        }
-    } while (userInput !== null && userInput.trim() !== '');
 
-    document.body.children.item(0).appendChild(list);
+            // Вставляем li в начало списка
+            list.insertBefore(listItem, list.firstChild);
+        }
+    }
+
+    function promptUserInput() {
+        userInput = prompt('Введите запись в списке:');
+        addItemToLI();
+
+        // После добавления элемента, вызываем prompt снова
+        if (userInput !== null && userInput.trim() !== '') {
+            setTimeout(promptUserInput, 0);
+        }
+    }
+
+    // Начинаем процесс с задержкой 0 миллисекунд
+    setTimeout(promptUserInput, 0);
 }
 
 createList();
