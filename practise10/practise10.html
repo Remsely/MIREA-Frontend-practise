@@ -10,7 +10,6 @@
 
 <div class="form-div">
     <form id="form">
-        <!-- Поля для ввода -->
         <label for="username">Имя пользователя:</label>
         <input type="text" id="username" name="username" required>
         <br>
@@ -18,13 +17,11 @@
         <input type="password" id="password" name="password" required>
         <br>
 
-        <!-- Капча -->
         <label for="captcha">Капча:</label>
         <div id="captcha"></div>
         <label for="userInput"></label><input type="text" id="userInput" name="userInput" required>
         <button type="button" onclick="checkCaptcha()">Проверить</button>
 
-        <!-- Кнопка отправки формы -->
         <br>
         <button type="submit" id="submitButton" disabled>Зарегистрироваться</button>
     </form>

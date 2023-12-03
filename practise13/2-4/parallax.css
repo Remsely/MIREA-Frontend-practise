@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.parallax,
+.parallax__layer {
+    height: 1000px;
+}
+
+.parallax__layer {
+    position: fixed;
+    background-position: bottom center;
+    background-size: auto 1038px;
+    background-repeat: repeat-x;
+    width: 100%;
+    z-index: 10;
+}
+
+.maincontent {
+    position: relative;
+    width: 100%;
+    min-height: 10px;
+    z-index: 99;
+    background-color: #210002;
+}
+
+#parallax-0 {
+    background-image: url(/images/parallax/layer0.png);
+    background-color: #ffaf1b;
+}
+
+#parallax-1 {
+    background-image: url(/images/parallax/layer1.png);
+}
+
+#parallax-2 {
+    background-image: url(/images/parallax/layer2.png);
+}
+
+#parallax-3 {
+    background-image: url(/images/parallax/layer3.png);
+}
+
+#parallax-4 {
+    background-image: url(/images/parallax/layer4.png);
+}
+
+#parallax-5 {
+    background-image: url(/images/parallax/layer5.png);
+}
+
+#parallax-6 {
+    background-image: url(/images/parallax/layer6.png);
+}
+
+#parallax-7 {
+    background-image: url(/images/parallax/layer7.png);
+}
+
+#parallax-8 {
+    background-image: url(/images/parallax/layer8.png);
+}
+
+.post {
+    background-color: #210002;
+    border: 1px solid #ffaf00;
+    color: #ffaf00;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.post p {
+    color: #fff;
+}
+
+#notification-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+}
+
+.notification {
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #ffaf00;
+    background-color: #210002;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.close-btn {
+    cursor: pointer;
+    font-size: 20px;
+}

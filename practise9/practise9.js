@@ -28,7 +28,7 @@ while (password !== 'Я главный') {
 }
 alert('Здравствуйте!');
 
-// 3
+// 2-4
 let isLiked = false;
 
 function toggleLike() {

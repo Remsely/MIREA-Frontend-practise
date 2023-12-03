@@ -41,7 +41,6 @@ function createList() {
             const listItem = document.createElement('li');
             listItem.textContent = userInput;
 
-            // Вставляем li в начало списка
             list.insertBefore(listItem, list.firstChild);
         }
     }
@@ -50,13 +49,11 @@ function createList() {
         userInput = prompt('Введите запись в списке:');
         addItemToLI();
 
-        // После добавления элемента, вызываем prompt снова
         if (userInput !== null && userInput.trim() !== '') {
             setTimeout(promptUserInput, 0);
         }
     }
 
-    // Начинаем процесс с задержкой 0 миллисекунд
     setTimeout(promptUserInput, 0);
 }
 
