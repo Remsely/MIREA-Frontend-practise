@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="practise14.css">
+    <title>Practise14</title>
+</head>
+<body>
+
+<div id="contents">
+    <a href="https://remsely.github.io/F1Shop/catalog" target="_blank">Ссылка 1</a>
+    <div>
+        <a href="https://remsely.github.io/F1Shop/wishlist" target="_blank">Ссылка 2</a>
+        <p>
+            <a href="https://remsely.github.io/F1Shop/about" target="_blank"><i>Ссылка 3</i></a>
+        </p>
+    </div>
+</div>
+
+<div class="image-switcher">
+    <img src="/images/img1.png" alt="Main Image" class="main-image" id="mainImage">
+
+    <div class="gallery-container">
+        <img src="/images/img1.png" alt="Image 1" class="thumbnail" onclick="changeImage('/images/img1.png')">
+        <img src="/images/img2.png" alt="Image 2" class="thumbnail" onclick="changeImage('/images/img2.png')">
+        <img src="/images/img3.png" alt="Image 3" class="thumbnail" onclick="changeImage('/images/img3.png')">
+        <img src="/images/img4.png" alt="Image 4" class="thumbnail" onclick="changeImage('/images/img4.png')">
+        <img src="/images/img5.png" alt="Image 5" class="thumbnail" onclick="changeImage('/images/img5.png')">
+    </div>
+</div>
+
+<ul class="selectable-list">
+    <li class="selectable-list-item" onclick="toggleSelection(this, event)" ondblclick="preventDefaultDoubleClick(event)">Элемент 1</li>
+    <li class="selectable-list-item" onclick="toggleSelection(this, event)" ondblclick="preventDefaultDoubleClick(event)">Элемент 2</li>
+    <li class="selectable-list-item" onclick="toggleSelection(this, event)" ondblclick="preventDefaultDoubleClick(event)">Элемент 3</li>
+    <li class="selectable-list-item" onclick="toggleSelection(this, event)" ondblclick="preventDefaultDoubleClick(event)">Элемент 4</li>
+</ul>
+
+<div id="slider">
+    <div class="slider-handle" onmousedown="startDragging()"></div>
+</div>
+
+<div id="products-container" onclick="startScaling()">
+    <div class="product" draggable="true" ondragstart="drag(event)" data-price="10" data-name="Товар 1">Товар 1 - $10</div>
+    <div class="product" draggable="true" ondragstart="drag(event)" data-price="20" data-name="Товар 2">Товар 2 - $20</div>
+    <div class="product" draggable="true" ondragstart="drag(event)" data-price="30" data-name="Товар 3">Товар 3 - $30</div>
+</div>
+
+<div id="cart" onclick="startAnimation()" ondragover="allowDrop(event)" ondrop="drop(event)">
+    <p>Корзина</p>
+    <p>Итого: $<span id="total">0</span></p>
+    <ul id="cartItems"></ul>
+</div>
+
+<script src="practise14.js"></script>
+
+</body>
+</html>
